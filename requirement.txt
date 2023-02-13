@@ -1,0 +1,10 @@
+pvporcupine
+pvrecorder
+revChatGPT
+pyaudio
+numpy
+scipy
+wave
+speech_recognition
+gtts
+pyttsx3
