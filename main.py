@@ -60,7 +60,7 @@ def run():
     from SpeechAgent import SpeechAgent
     logging.info('start recognize_from_microphone')
     question = SpeechAgent.recognize_from_microphone_manual()
-    if question is not None:
+    if question is not None and len(question) != 0:
         logging.info(f'recognize_from_microphone, text={question}')
         answer = chatGPT(question)
         SpeechAgent.text_to_speech(answer)
