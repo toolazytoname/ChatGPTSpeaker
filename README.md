@@ -10,6 +10,9 @@ access_key=XXXXXXinput_your_key_here
 [openai]
 api_key=XXXXXXinput_your_key_here
 ~~~
+* visit https://picovoice.ai/ for  porcupine key
+* visit https://beta.openai.com/account/api-keys for openai key
+
 
 ##  install  requirements
 ~~~
