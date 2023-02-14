@@ -64,13 +64,32 @@ class SpeetchToText:
             wf.setframerate(RATE)
             wf.writeframes(b''.join(frames))
 
+
+
     @classmethod
-    def file_to_text_google(cls, file_path):
+    def file_to_text(cls, file_path):
         try:
+            text = None
             import speech_recognition as sr
             # create a speech recognition object
             r = sr.Recognizer()
+            # open the file
+            with sr.AudioFile(file_path) as source:
+                # listen for the data (load audio to memory)
+                audio_data = r.record(source)
+                # recognize (convert from speech to text)
+                text = r.recognize_sphinx(audio_data, language="zh-CN")
+                print(text)
+        finally:
+            return text
+
+    @classmethod
+    def file_to_text_google(cls, file_path):
+        try:
             text = None
+            import speech_recognition as sr
+            # create a speech recognition object
+            r = sr.Recognizer()
             # open the file
             with sr.AudioFile(file_path) as source:
                 # listen for the data (load audio to memory)
@@ -82,7 +101,7 @@ class SpeetchToText:
             return text
 
     @classmethod
-    def microphone_to_text(cls):
+    def microphone_to_text_google(cls):
         # https://www.lsbin.com/7333.html
         import speech_recognition as sr
         # create a speech recognition object

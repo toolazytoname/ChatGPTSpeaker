@@ -1,2 +1,4 @@
 config.ini
 .idea
+.vscode/
+__pycache__/

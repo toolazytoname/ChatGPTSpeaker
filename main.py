@@ -10,7 +10,8 @@ def picovoice():
     cfg = ConfigParser()
     cfg.read('config.ini')
     access_key = cfg.get('porcupine', 'access_key')
-    hello_marry_path = "/Users/lazy/Code/crack/HelloChat/Hello-Marry_en_mac_v2_1_0/Hello-Marry_en_mac_v2_1_0.ppn"
+
+    hello_marry_path = os.path.dirname(__file__) + "/Hello-Marry_en_mac_v2_1_0/Hello-Marry_en_mac_v2_1_0.ppn"
     keyword_paths = [hello_marry_path]
 
     keywords = list()

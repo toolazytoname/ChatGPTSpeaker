@@ -14,9 +14,11 @@ api_key=XXXXXXinput_your_key_here
 * visit https://beta.openai.com/account/api-keys for openai key
 
 
-##  install  requirements
+##  install  requirements in Mac
 ~~~
-pip install requirements.txt
+brew install portaudio
+brew install mpg321
+pip install -r requirements.txt
 ~~~
 
 ## run main.py
