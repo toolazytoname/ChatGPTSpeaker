@@ -32,7 +32,6 @@ def picovoice():
     for keyword in zip(keywords):
         print('  %s ' % (keyword))
     print('}')
-
     while True:
         pcm = recorder.read()
         result = porcupine.process(pcm)
