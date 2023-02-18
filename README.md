@@ -1,5 +1,5 @@
 # ChatGPTSpeaker
-A smart speaker ，combine ChatGPT  with Speech-to-Text and  Text-to-Speech
+A smart speaker that combines ChatGPT, Speech-to-Text, and Text-to-Speech.
 # How to use
 ## create a config file config.ini
 
@@ -14,12 +14,18 @@ api_key=XXXXXXinput_your_key_here
 * visit https://beta.openai.com/account/api-keys for openai key
 
 
-##  install  requirements in Mac
+##  install  requirements
+### Mac
 ~~~
 brew install portaudio
 brew install mpg321
 pip install -r requirements.txt
 ~~~
+### Linux
+The custom wake-up word model for this platform needs to be retrained, and the code also needs to load different wake-up word resources according to the platform selection. (It is probably unnecessary to use the default wake-up word). 
+
+### Windows
+Same as the Linux above.
 
 ## run main.py
 
@@ -29,6 +35,17 @@ pip install -r requirements.txt
 * you will get a response
 
 enjoy it.
+
+# Some shortcomings to be improved
+- [ ] TTS services require scientific networking for access which leads to instability.
+- [ ] The overall time consumption needs to be optimized.
+- [ ] The mute detection logic is not intelligent enough.
+  - [ ] At the beginning: if speech is not given promptly when recording starts, recording may end directly.
+  - [ ] At the end: if speech is given slowly during recording, it may be misjudged as ending.  
+- [ ] The code is not robust enough.
+  - [ ] It does not support scenarios where the TTS network access is abnormal.
+  - [ ] No try-catch is used in the overall code.
+  - [ ] It feels a bit low to use a while true outside.
 
 # 补充说明
 这个工具能否在大陆使用呢？
