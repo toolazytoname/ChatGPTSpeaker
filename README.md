@@ -22,7 +22,7 @@ brew install mpg321
 pip install -r requirements.txt
 ~~~
 ### Linux
-The custom wake-up word model for this platform needs to be retrained, and the code also needs to load different wake-up word resources according to the platform selection. (It is probably unnecessary to use the default wake-up word). 
+- [ ] The custom wake-up word model for this platform needs to be retrained, and the code also needs to load different wake-up word resources according to the platform selection. (It is probably unnecessary to use the default wake-up word). 
 
 ### Windows
 Same as the Linux above.
@@ -30,7 +30,7 @@ Same as the Linux above.
 ## run main.py
 
 ## have fun
-* the wake up word is "hello marry",so you should say "Hello Marry"
+* the wake up word is "Hello Marry",so you should say "Hello Marry"
 * ask a question
 * you will get a response
 
@@ -46,6 +46,9 @@ enjoy it.
   - [ ] It does not support scenarios where the TTS network access is abnormal.
   - [ ] No try-catch is used in the overall code.
   - [ ] It feels a bit low to use a while true outside.
+- [ ] we can only chat in Chinese now and haven't supported English conversation yet.
+
+
 
 # 补充说明
 这个工具能否在大陆使用呢？
