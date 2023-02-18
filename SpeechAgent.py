@@ -18,6 +18,6 @@ class SpeechAgent:
     @classmethod
     def text_to_speech(cls, text):
         from TextToSpeech import TextToSpeech
-        # TextToSpeech.tts_pyttsx3(text)
+        TextToSpeech.tts_pyttsx3(text)
         # tts_gtts 效果更好，但是大陆用不了
-        TextToSpeech.tts_gtts(text)
+        # TextToSpeech.tts_gtts(text)

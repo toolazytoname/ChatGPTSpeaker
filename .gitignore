@@ -2,3 +2,4 @@ config.ini
 .idea
 .vscode/
 __pycache__/
+ChatLog.log
